@@ -1,0 +1,22 @@
+.Hello {
+  // @mixin debug;
+  position: relative;
+  $imgSize: 64px;
+  $padding: 20px;
+  padding: $padding;
+  &-Title {
+    min-height: $imgSize;
+    padding-left: @calc($imgSize + $padding * 2);
+  }
+  &-Image {
+    position: absolute;
+    top: $padding;
+    left: $padding;
+    width: $imgSize;
+    height: $imgSize;
+    img {
+      max-width: $imgSize;
+      max-height: $imgSize;
+    }
+  }
+}

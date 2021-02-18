@@ -1,0 +1,41 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit:
+  // https://code.visualstudio.com/docs/editor/debugging#_launch-configurations
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "current file",
+      "program": "${file}",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+    },
+    {
+      "name": "jest",
+      "program": "${workspaceRoot}/node_modules/jest/bin/jest.js",
+      "args": [
+        "--verbose",
+        "routes",
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+      // "outputCapture" : "std",
+      // "protocol": "inspector",
+      "console": "integratedTerminal",
+    },
+    {
+      "name": "webpack",
+      "program": "${workspaceRoot}/node_modules/webpack/bin/webpack.js",
+      "args": [
+        "--mode",
+        "development",
+      ],
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "node",
+    },
+  ],
+}

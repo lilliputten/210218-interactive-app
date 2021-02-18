@@ -1,0 +1,5 @@
+#!/bin/sh
+# @desc Overriding config (local version -- NOT stored in repository)
+# @changed 2020.10.05, 23:57
+
+DIST_REPO="git@localhost:user/WebUiCoreDist.git"

@@ -1,0 +1,32 @@
+/** @module index.pcss
+ *  @since 2021.02.19, 00:55
+ *  @changed 2021.02.19, 00:55
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $bodyBgColor;
+
+}
+body,
+table,
+input,
+textarea,
+.defaultFont {
+  @mixin defaultFont;
+  // font-size: 30px; // DEBUG
+  color: $defaultTextColor;
+}
+
+body, html {
+  @mixin fullScreen;
+  // overflow: hidden;
+  // position: fixed;
+  // left: 0;
+  // right: 0;
+  // top: 0;
+  // bottom: 0;
+  // border: 1px solid red;
+}
+

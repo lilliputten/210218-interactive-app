@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* background-color: white; */
+    height: 100px;
+    width: 660px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: 1s;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    border: 6px solid red;
+}
+
+.button {
+    margin-left: 100px;
+    float: left;
+    padding: 14px 3px;
+    width: 130px;
+    height: 50px;
+    background-color: lightblue;
+    border-radius: 15px;
+}
+
+.button:hover {
+    cursor: pointer;
+}

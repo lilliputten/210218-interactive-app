@@ -1,0 +1,11 @@
+@define-mixin FormItemFramed $color:$formItemBorderColor {
+  /* border-width: $(formItemBorderSize)px; */
+  /* border-style: solid; */
+  border-radius: @calc($formItemBorderRadius)px;
+  /* border-color: $formItemBorderColor; */
+  /* border-color: transparent; */
+  /* border-color: $color; */
+  .FormItem-Control {
+    border-radius: @calc($formItemBorderRadius - 1)px;
+  }
+}

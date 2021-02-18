@@ -1,0 +1,14 @@
+Intro:
+  title: 'Текст заголовка'
+  text: 'Текст приглашения'
+  actions:
+    -
+      link: passp
+cards:
+  passp:
+    title: 'На главной стороне:'
+    text: 'Ксерокопия паспорта'
+    variants:
+      - 'Надо убрать'
+      - '(correct) Можно оставить'
+

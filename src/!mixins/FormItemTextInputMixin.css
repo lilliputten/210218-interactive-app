@@ -1,0 +1,24 @@
+/* UNUSED? */
+@define-mixin FormItemTextInputMixin {
+  box-sizing: border-box;
+  /* border-radius: $(formItemBorderRadius)px; */
+  padding: 0 $(formItemInnerPaddingH)px;
+  width: 100%;
+  height: $(formItemHeight)px;
+  line-height: $(formItemHeight)px;
+  background: none;
+  border: none;
+  outline: 0;
+  display: inline-block;
+  color: $formItemTextColor;
+  &:focus {
+    outline: 0;
+  }
+  &:placeholder {
+    color: red;
+    /* color: $formItemPlaceholderColor; */
+  }
+  &:-ms-clear {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+<!--
+ @changed 2019.09.27, 08:18
+-->
+
+# Project environment
+
+- `util-config.sh`
+- `util-config-local.sh`
+- `webpack.env.local.js`
+- `webpack.env.js`
+- `package.json`
+- `babel.config.js`
+- `webpack.config.js`
+- `.eslintrc.js`
+- `.lvimrc`
+- `.git/config`
+
+# Project config
+
+- `src/config/config.js`
+- `src/config/css.js`
+- `src/config/app.js`
+- `src/config/constants.js`
+- `src/config/limits.js`
+
+# Core files
+
+- `src/build.jsx`
+- `src/demo.jsx`
+
+## Source file extensions (for search & replace)
+
+`*.js,*.jsx,*.pcss,*.css,*.json,*.md,*.txt`

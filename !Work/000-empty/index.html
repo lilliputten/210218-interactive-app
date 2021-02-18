@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+  @build <%=buildTag%>
+  @changed 2021.02.11, 21:12
+-->
+<html class="Clippable">
+  <head>
+    <title>Loading...</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <!-- Non-webpack static legacy styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Built styles -->
+  </head>
+  <body class="page page_theme_<%=THEME%>">
+    <!-- Server authorization data placeholder -->
+    <div style="display: none">$CONTENT_REPLACEMENT$</div>
+    <!-- Server API access properties placeholder -->
+    <div style="display: none">$WEB_SETTINGS$</div>
+    <!-- Core content placeholder -->
+    <div id="root"></div>
+    <!-- Built scripts -->
+  </body>
+</html>
+

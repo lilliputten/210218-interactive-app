@@ -1,0 +1,31 @@
+# Personal config files
+# .lvimrc
+# .projectroot
+util-config-local.sh
+webpack.env.local.js
+
+# Unused folders
+.DS_Store
+node_modules
+\!UNUSED*
+\!ARC*
+
+# IDE
+# /.vscode/
+.idea
+*.session
+
+# Build & auto-genrated files...
+.webpack-stats.json
+.gitmodules
+/build*/
+/demo*/
+/publish/
+
+# Temp project files
+tags
+.*.sw?
+*.tmp
+*.bak
+*~
+*_
