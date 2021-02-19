@@ -1,6 +1,6 @@
 /** @desc Webpack configuration
  *  @since 2021.02.19, 00:55
- *  @changed 2021.02.19, 00:55
+ *  @changed 2021.02.19, 15:24
  */
 /* eslint-disable no-console */
 
@@ -133,7 +133,7 @@ module.exports = (env, argv) => {
     // // name: (isDevServer || isDevServer) ? '[path][name].[ext]' : staticFolderUrl + '/[name]-[contenthash:8].[ext]',
     // name: (isDevServer || isDevServer) ? '[path][name].[ext]' : staticFolderUrl + '/[name]-[hash:8].[ext]',
     // Mirroring static files folders
-    publicPath: '..', // Root relative to 'css' folder
+    publicPath: '..', // Root relative from 'css' folder
     name: (file) => {
       let name = file;
       if (isDevServer /* || isDev */) {
@@ -258,7 +258,7 @@ module.exports = (env, argv) => {
   const debugModes = [
     buildTag,
     'mode:' + mode,
-    'buildPath:' + buildPath,
+    // 'buildPath:' + buildPath,
     // mode,
     // 'ip:' + myIP,
     isCosmos && 'Cosmos',
@@ -371,7 +371,8 @@ module.exports = (env, argv) => {
         // due to incorrect webpack `publicPath` resolving for library.
         // See [How to ship assets?](https://github.com/webpack/webpack/issues/7353)
         // TODO: M.b. here exists the solution for store library assets outside js code?
-        loader: require.resolve('file-loader'),
+        loader: require.resolve('file-loader'), // Use external assed from files
+        // loader: require.resolve('url-loader'), // Use css-injected assets
         // loader: isDevServer ? require.resolve('file-loader') : require.resolve('url-loader'),
         options: fileLoaderOptions,
       },
@@ -423,7 +424,7 @@ module.exports = (env, argv) => {
         fileName: 'version.txt',
         content: buildTag,
       }),
-      // new CreateFileWebpack({ // Create build package.json file
+      // !isDevServer && new CreateFileWebpack({ // Create build package.json file
       //   path: buildPath,
       //   fileName: 'package.json',
       //   content: JSON.stringify(getBuildPackageConfig(), null, 2),
