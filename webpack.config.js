@@ -30,10 +30,10 @@ module.exports = (env, argv) => {
   const isWatch = !!argv.watch;
   const isDev = (/* isDevServer || */ mode === 'development');
   const isProd = !isDev; // mode === 'production'
-  const useDevTool = true; // && (isDev || isDevServer) // Need server restart
-  const minimizeBundles = false && isProd; // To minimize production bundles
+  const useDevTool = true && isDev; // && (isDev || isDevServer) // Need server restart
+  const minimizeBundles = true && isProd; // To minimize production bundles
   const preprocessBundles = false && isProd; // To minimize production bundles
-  const sourceMaps = true; // !preprocessBundles // To minimize production bundles
+  const sourceMaps = true && isDev; // !preprocessBundles // To minimize production bundles
   // const extemeUglify = false // Use mangling (WARNING: May broke some code! Don't use without testing!)
   const DEBUG = true && (isDev || isDevServer);
   const rootPath = path.resolve(__dirname);
@@ -335,7 +335,7 @@ module.exports = (env, argv) => {
         options: {
           // sourceRoot: '/',
           inputSourceMap: true,
-          sourceMaps: true,
+          sourceMaps: sourceMaps,
           retainLines: true,
           cacheDirectory: true,
         },

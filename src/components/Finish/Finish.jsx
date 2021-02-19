@@ -31,7 +31,7 @@ class Finish extends React.PureComponent {
     const answeredQuestions = CardsStat.getCorrectAnswersCount();
     return (
       <div className={cnFinish()}>
-        <p className={cnFinish('Text')}>Ваш результат {answeredQuestions} правильных ответов из {totalQuestions}.</p>
+        <p className={cnFinish('Text')}>Правильных ответов: {answeredQuestions} из {totalQuestions}.</p>
         <Actions className={cnFinish('Actions')}>{actionsContent}</Actions>
       </div>
     );

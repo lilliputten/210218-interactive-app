@@ -2,9 +2,9 @@
   "name": "interactive",
   "description": "Simple interactive app",
   "NOTE": "All version and time stamp properties are updated automatically (see `util-update-build-variables.sh`, `util-increment-version.sh`)!",
-  "version": "0.0.2",
-  "timetag": "210219-0637",
-  "timestamp": "2021.02.19, 06:37",
+  "version": "0.0.3",
+  "timetag": "210219-0656",
+  "timestamp": "2021.02.19, 06:56",
   "changed": "2021.02.19, 00:55",
   "main": "src/build.js",
   "keywords": [
