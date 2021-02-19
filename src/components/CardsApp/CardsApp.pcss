@@ -3,5 +3,21 @@
  *  @changed 2021.02.19, 00:58
  */
 .CardsApp {
-  @mixin fullScreen;
+  &,
+  &-Cover,
+  &-Content {
+    @mixin fullScreen;
+  }
+  text-align: center;
+  // color: #fff;
+  background-image: url('./img/folder-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &-Cover {
+    // background-color: #fff;
+    // opacity: .4;
+    background-color: #000;
+    opacity: .5;
+  }
 }

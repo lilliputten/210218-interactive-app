@@ -62,7 +62,7 @@ class CardQuestion extends React.PureComponent {
     return (
       <div className={cnCardQuestion({ cardId })}>
         <div className={cnCardQuestion('Info')}>Вопрос {questionNo} из {totalQuestions}</div>
-        <div className={cnCardQuestion('Text')}>{question}</div>
+        <div className={cnCardQuestion('Question')}>{question}</div>
         <Variants
           className={cnCardQuestion('Variants')}
           cardId={cardId}

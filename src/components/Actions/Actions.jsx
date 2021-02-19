@@ -12,7 +12,7 @@ import './Actions.pcss';
 
 const cnActions = cn('Actions');
 
-const Actions = ({ children, actions }) => {
+const Actions = ({ className, children, actions }) => {
   let content = actions || children;
   if (Array.isArray(children)) {
     content = children.map((itemData, n) => {
@@ -23,7 +23,7 @@ const Actions = ({ children, actions }) => {
     });
   }
   return (
-    <div className={cnActions()}>
+    <div className={cnActions(null, [className])}>
       {content}
     </div>
   );

@@ -1,0 +1,3 @@
+@define-mixin Title {
+  font-size: $(fontSizeXl)px;
+}

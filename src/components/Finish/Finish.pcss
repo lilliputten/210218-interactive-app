@@ -3,4 +3,18 @@
  *  @changed 2021.02.19, 01:17
  */
 .Finish {
+  @mixin fullScreen;
+  @mixin cardContainer;
+  & > * {
+    @mixin cardItem;
+  }
+  &-Text {
+    @mixin Title;
+  }
+  &-Info {
+    @mixin Info;
+  }
+  &-Actions {
+    @mixin Actions;
+  }
 }

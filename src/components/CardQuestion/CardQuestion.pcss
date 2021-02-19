@@ -4,4 +4,18 @@
  */
 .CardQuestion {
   @mixin fullScreen;
+  @mixin cardContainer;
+  & > * {
+    @mixin cardItem;
+  }
+  &-Question {
+    @mixin Title;
+  }
+  &-Info {
+    @mixin Info;
+  }
+  &-Variants,
+  &-Actions {
+    @mixin Actions;
+  }
 }

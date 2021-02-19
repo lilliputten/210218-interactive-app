@@ -1,6 +1,7 @@
 {
   "name": "interactive",
   "description": "Simple interactive app",
+  "title": "Интерактив",
   "NOTE": "All version and time stamp properties are updated automatically (see `util-update-build-variables.sh`, `util-increment-version.sh`)!",
   "version": "0.0.3",
   "timetag": "210219-0656",

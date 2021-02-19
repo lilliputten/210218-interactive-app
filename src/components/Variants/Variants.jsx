@@ -56,6 +56,7 @@ class Variants extends React.PureComponent {
         key={id}
         id={id}
         size="large"
+        theme="variant"
         {...data}
         onClick={this.onClick}
       />
@@ -73,8 +74,9 @@ class Variants extends React.PureComponent {
 
   render() {
     const content = this.renderContent();
+    const { className } = this.props;
     return (
-      <div className={cnVariants()}>
+      <div className={cnVariants(null, [className])}>
         {content}
       </div>
     );

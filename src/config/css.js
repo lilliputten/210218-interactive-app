@@ -10,7 +10,7 @@ const theme = require(process.env.THEME_FILE);
 
 // Some reusable parameters...
 const defaultFontSize = theme.defaultFontSize || 16;
-const textColor = theme.textColor || '#444';
+const textColor = theme.textColor || '#fff';
 
 const defaultTransitionTime = 250;
 const defaultAnimateTime = 500;
@@ -65,12 +65,11 @@ const cssConfig = { // Common-used css variables...
 
   // Theme colors...
 
-  bodyBgColor: theme.bodyBgColor || '#fff',
-  bodyTextColor: theme.bodyTextColor || '#333',
-  layoutBgColor: theme.layoutBgColor || '#f0f0f0',
-  layoutLightBgColor: theme.layoutLightBgColor || '#f7f7f7',
-
-  layoutBorderColor: theme.layoutBorderColor || '#ccc',
+  bodyBgColor: theme.bodyBgColor || '#999',
+  bodyTextColor: theme.bodyTextColor || textColor || '#fff',
+  // layoutBgColor: theme.layoutBgColor || '#f0f0f0',
+  // layoutLightBgColor: theme.layoutLightBgColor || '#f7f7f7',
+  // layoutBorderColor: theme.layoutBorderColor || '#ccc',
 
   themeColors: { // Generic theming colors...
 
@@ -96,7 +95,7 @@ const cssConfig = { // Common-used css variables...
     purple: '#800080',
     fuchsia: '#ff00ff',
     green: '#008000',
-    // lime: '#00ff00',
+    lime: '#00ff00',
     olive: '#808000',
     // yellow: '#ffff00',
     navy: '#000080',
@@ -217,8 +216,8 @@ Object.assign(cssConfig, { // Form properties...
   formItemBorderSize, // px
   formItemInnerHeight, // px
 
-  formItemBorderRadius: 3, // px
-  formItemOuterGlow: 4, // px
+  formItemBorderRadius: 5, // px
+  formItemOuterGlow: 5, // px
   formItemGlowColor: cssConfig.primaryColor, // cssConfig.neutralColor,
   formItemBorderColor: cssConfig.neutralColor,
   formItemActorColor: cssConfig.neutralDarkColor,

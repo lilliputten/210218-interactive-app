@@ -62,8 +62,15 @@ class CardAnswer extends React.PureComponent {
     const butttonText = isLastCard ? 'Посмотреть результаты' : 'Далее';
     return (
       <div className={cnCardAnswer({ cardId, correct: isCorrect })}>
-        <div className={cnCardAnswer('Result')}>{resultText}</div>
-        <div className={cnCardAnswer('Text')}>{answer}</div>
+        <div className={cnCardAnswer('Info')}>Вопрос {questionNo} из {totalQuestions}</div>
+        <div className={cnCardAnswer('Text')}>
+          <div className={cnCardAnswer('Result')}>
+            <span className={cnCardAnswer('ResultText')}>
+              {resultText}
+            </span>
+          </div>
+          {answer}
+        </div>
         <Actions className={cnCardAnswer('Actions')}>
           <Button
             text={butttonText}

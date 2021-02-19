@@ -1,6 +1,6 @@
 #!/bin/sh
 # @desc Pack build
-# @changed 2020.11.17, 18:27
+# @changed 2021.02.19, 06:57
 
 PRJNAME="interactive"
 

@@ -1,0 +1,3 @@
+@define-mixin cardItem {
+  margin: 10px;
+}

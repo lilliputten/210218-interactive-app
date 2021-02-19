@@ -1,0 +1,4 @@
+@define-mixin Info {
+  font-size: $(fontSizeSm)px;
+  opacity: .5;
+}

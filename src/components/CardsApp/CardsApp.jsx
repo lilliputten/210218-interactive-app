@@ -26,17 +26,20 @@ const CardsApp = () => {
   const cardPath = cardUrlPrefix + ':cardId';
   return (
     <div className={cnCardsApp()}>
-      <Router>
-        <Switch>
-          {/*
-          <Route exact path={finishUrl} component={Finish} />
-          */}
-          <Route exact path="/" component={Start} />
-          <Route path={cardPath} component={Card} />
-          <Route exact path={finishUrl} component={Finish} />
-          <Route path="*" exact component={NotFoundPage} />
-        </Switch>
-      </Router>
+      <div className={cnCardsApp('Cover')} />
+      <div className={cnCardsApp('Content')}>
+        <Router>
+          <Switch>
+            {/*
+            <Route exact path={finishUrl} component={Finish} />
+            */}
+            <Route exact path="/" component={Start} />
+            <Route path={cardPath} component={Card} />
+            <Route exact path={finishUrl} component={Finish} />
+            <Route path="*" exact component={NotFoundPage} />
+          </Switch>
+        </Router>
+      </div>
     </div>
   );
 };

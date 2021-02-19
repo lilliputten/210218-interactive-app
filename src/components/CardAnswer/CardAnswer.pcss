@@ -4,4 +4,50 @@
  */
 .CardAnswer {
   @mixin fullScreen;
+  @mixin cardContainer;
+  & > * {
+    @mixin cardItem;
+  }
+  &-Info {
+    @mixin Info;
+    margin-bottom: 20px;
+  }
+  $wrongColor: red;
+  $correctColor: #0C0; // lime;
+  &-Text {
+    // @mixin Title;
+    // font-size: $(fontSizeXl)px;
+    border: 2px solid $wrongColor;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+  }
+  &-Result {
+    @mixin Info;
+    position: absolute;
+    top: -1em;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    // font-size: $(fontSizeSm)px;
+    // opacity: .6;
+  }
+  &-ResultText {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: $wrongColor;
+    border-radius: 5px;
+  }
+  &_correct {
+    & ^&-Text {
+      border-color: $correctColor;
+    }
+    & ^&-ResultText {
+      background-color: $correctColor;
+    }
+  }
+  &-Variants,
+  &-Actions {
+    @mixin Actions;
+  }
 }

@@ -63,6 +63,7 @@ module.exports = (env, argv) => {
   // Project version, application title
   const {
     // name: projectName,
+    title: projectTitle,
     version,
     timestamp,
     timetag,
@@ -114,7 +115,7 @@ module.exports = (env, argv) => {
     timetag,
     buildType,
     buildMode,
-    THEME,
+    // THEME,
   ].join('-');
 
   // NOTE: Dynamically created dist library name from project name
@@ -250,6 +251,7 @@ module.exports = (env, argv) => {
     timetag,
     timestamp,
     version,
+    projectTitle,
   };
 
   // Stats waiting only json on output...

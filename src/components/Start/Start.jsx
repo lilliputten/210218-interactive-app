@@ -7,6 +7,7 @@ import React from 'react';
 import { cn } from '@bem-react/classname';
 import Actions from 'components/Actions';
 import Button from 'components/Button';
+import * as CardData from 'data/CardData';
 import * as CardsHelpers from 'components/CardsHelpers';
 import * as CardsStat from 'components/CardsStat';
 
@@ -33,9 +34,11 @@ class Start extends React.PureComponent {
     const actionsContent = (
       <Button text="Начать" onClick={this.onStart} />
     );
+    const totalQuestions = CardData.getTotalCardsCount();
     return (
       <div className={cnStart()}>
-        <p className={cnStart('Text')}>Теперь попробуйте убрать из личного дела документы, которые гарантируют штраф от инспекторов.</p>
+        <div className={cnStart('Text')}>Теперь попробуйте убрать из личного дела документы, которые гарантируют штраф от инспекторов.</div>
+        <div className={cnStart('Info')}>{totalQuestions} вопросов</div>
         <Actions className={cnStart('Actions')}>{actionsContent}</Actions>
       </div>
     );

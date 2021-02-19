@@ -1,0 +1,7 @@
+@define-mixin cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}

@@ -52,12 +52,20 @@
 
   // Themes...
 
-  border: 1px solid $neutralColor;
-  border-radius: $(formItemBorderRadius)px;
   transition: background $(transitionTime)ms, border $(transitionTime)ms, box-shadow $(transitionTime)ms;
+
+  &-Text {
+    color: $defaultTextColor;
+  }
+  border: 1px solid color(#fff alpha(.5));
+  border-radius: $(formItemBorderRadius)px;
+  // background-color: color(#000 alpha(.1));
   &:hover {
-    border-color: $neutralDarkColor;
-    background-color: color($neutralColor alpha(.5));
+    border-color: color(#fff alpha(.8));
+    background-color: color(#fff alpha(.1));
+    box-shadow: 0 0 $(formItemOuterGlow)px 0 #fff;
   }
 
+  &_theme_variant {
+  }
 }

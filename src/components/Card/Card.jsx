@@ -121,7 +121,10 @@ class Card extends React.PureComponent {
     }
     const content = isAnswered ? this.renderAnswer() : this.renderQuestion();
     return (
-      <div key={cardId} className={cnCard({ cardId })}>
+      <div key={'Card-' + cardId} className={cnCard({ cardId })}>
+        {/*
+        <div className={cnCard('Cover')} />
+        */}
         {content}
       </div>
     );
