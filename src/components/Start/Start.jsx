@@ -35,10 +35,10 @@ class Start extends React.PureComponent {
       <Button text="Начать" onClick={this.onStart} />
     );
     const totalQuestions = CardData.getTotalCardsCount();
+    // <div className={cnStart('Text')}>Теперь попробуйте убрать из личного дела документы, которые гарантируют штраф от инспекторов.</div>
+    // <div className={cnStart('Info')}>{totalQuestions} вопросов</div>
     return (
       <div className={cnStart()}>
-        <div className={cnStart('Text')}>Теперь попробуйте убрать из личного дела документы, которые гарантируют штраф от инспекторов.</div>
-        <div className={cnStart('Info')}>{totalQuestions} вопросов</div>
         <Actions className={cnStart('Actions')}>{actionsContent}</Actions>
       </div>
     );

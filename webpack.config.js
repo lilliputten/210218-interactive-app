@@ -371,7 +371,8 @@ module.exports = (env, argv) => {
         // due to incorrect webpack `publicPath` resolving for library.
         // See [How to ship assets?](https://github.com/webpack/webpack/issues/7353)
         // TODO: M.b. here exists the solution for store library assets outside js code?
-        loader: isDevServer ? require.resolve('file-loader') : require.resolve('url-loader'),
+        loader: require.resolve('file-loader'),
+        // loader: isDevServer ? require.resolve('file-loader') : require.resolve('url-loader'),
         options: fileLoaderOptions,
       },
     ] },
@@ -403,7 +404,8 @@ module.exports = (env, argv) => {
         filename: htmlFilename,
         cache: true,
         inject: true,
-        minimify: minimizeBundles,
+        minify: false,
+        // minimify: minimizeBundles,
         // title: appTitle, // Not using; see i18n-specific appTitle** variables above (passed to js code env)
         templateParameters: Object.assign({}, cssConfig, passParameters),
       }),
