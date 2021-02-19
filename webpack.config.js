@@ -258,6 +258,7 @@ module.exports = (env, argv) => {
   const debugModes = [
     buildTag,
     'mode:' + mode,
+    'buildPath:' + buildPath,
     // mode,
     // 'ip:' + myIP,
     isCosmos && 'Cosmos',
@@ -414,7 +415,7 @@ module.exports = (env, argv) => {
         process: preprocessJs
       }),
       // new webpack.NoEmitOnErrorsPlugin(), // ???
-      new CreateFileWebpack({ // Create build tag file
+      !isDevServer && new CreateFileWebpack({ // Create build tag file
         path: buildPath,
         fileName: 'version.txt',
         content: buildTag,
