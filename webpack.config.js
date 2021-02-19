@@ -393,6 +393,7 @@ module.exports = (env, argv) => {
       !isDevServer && new CopyWebpackPlugin({ // Simply copies the files over
         patterns: [
           { from: 'static-build-files', to: './', ...CopyWebpackPluginOptions },
+          { from: 'favicon.ico', to: './', ...CopyWebpackPluginOptions },
           // { from: 'CHANGELOG.md', to: './', ...CopyWebpackPluginOptions },
           // { from: 'README.md', to: './', ...CopyWebpackPluginOptions }, // Readme listed at last position -- then can be overriden if readme exists in `static-build-files` (commands executiong in reversed order?).
         ].filter(Boolean),
