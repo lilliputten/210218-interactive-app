@@ -133,7 +133,7 @@ module.exports = (env, argv) => {
     // // name: (isDevServer || isDevServer) ? '[path][name].[ext]' : staticFolderUrl + '/[name]-[contenthash:8].[ext]',
     // name: (isDevServer || isDevServer) ? '[path][name].[ext]' : staticFolderUrl + '/[name]-[hash:8].[ext]',
     // Mirroring static files folders
-    // publicPath: '..', // Root relative to 'css' folder
+    publicPath: '..', // Root relative to 'css' folder
     name: (file) => {
       let name = file;
       if (isDevServer /* || isDev */) {
