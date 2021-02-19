@@ -1,0 +1,38 @@
+/** @module NotFoundPage.pcss
+ *  @since 2020.04.27, 18:16
+ *  @changed 2020.04.27, 20:41
+ */
+
+.NotFoundPage {
+  margin: 20px;
+  $iconSize: 70px;
+  margin: 20px auto;
+  &-Content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // align-items: flex-start;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-left: 20px;
+  }
+  &-Icon, &-Details {
+    margin: 15px;
+    display: inline-block;
+  }
+  &-Details {
+    padding-top: 10px;
+  }
+  &-Icon {
+    svg {
+      // Override `fa-*` styles
+      width: $iconSize !important;
+      height: $iconSize !important;
+      opacity: .2;
+    }
+  }
+  &-Title {
+    font-size: $(fontSizeXxl)px;
+    opacity: .5;
+  }
+}

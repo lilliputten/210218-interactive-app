@@ -17,11 +17,10 @@ import CardsApp from 'components/CardsApp';
 
 // import * as demoSupport from './demoSupport';
 
-import config from 'config';
-import cardsData from './cards-data.yaml';
-
-// Set cards data to config
-config.cardsData = cardsData;
+// import config from 'config';
+// // Set cards data to config
+// import cardsData from 'data/cards-data.yaml';
+// config.cardsData = cardsData;
 
 // Demo app styles
 import './index.pcss';

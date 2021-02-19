@@ -1,0 +1,19 @@
+/** @module ErrorContainer.pcss
+ *  @desc Displays error messages
+ *  @since 2019.06.20, 13:11
+ *  @changed 2020.05.29, 13:33
+ */
+
+.ErrorContainer {
+  color: $errorColor;
+  &_block {
+    padding: 5px 15px;
+    border-radius: 5px;
+    background-color: $errorColor;
+    color: #fff;
+    line-height: 1.2;
+  }
+  & > .Text {
+    margin: 10px 0;
+  }
+}

@@ -1,0 +1,63 @@
+/** @module Button.pcss
+ *  @since 2021.02.19, 01:16
+ *  @changed 2021.02.19, 01:17
+ */
+.Button {
+  // Override standard html button styles
+  & {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    @mixin defaultFont;
+    vertical-align: bottom;
+    background: none;
+    background-color: transparent;
+    text-align: left;
+  }
+
+  outline: 0;
+
+  padding: 0 $(formItemInnerPaddingH)px;
+
+  max-width: 100%; // ??? Fit in container?
+
+  &, &-Text, &-Icon {
+    white-space: nowrap;
+    position: relative;
+    line-height: $(formItemInnerHeight)px;
+  }
+
+  &-Text, &-Icon {
+    display: inline-block;
+    position: relative;
+    vertical-align: bottom;
+    ^&:not(button) & {
+      margin-top: 1px; // Compensate visual difference between button & regular tag (Attention! To test!)
+    }
+  }
+
+  cursor: default;
+  &:not(&_disabled) {
+    cursor: pointer;
+  }
+
+  &-Icon {
+    color: $neutralColor; // Default icon color
+  }
+  &-Text {
+    display: block; // ???
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  // Themes...
+
+  border: 1px solid $neutralColor;
+  border-radius: $(formItemBorderRadius)px;
+  transition: background $(transitionTime)ms, border $(transitionTime)ms, box-shadow $(transitionTime)ms;
+  &:hover {
+    border-color: $neutralDarkColor;
+    background-color: color($neutralColor alpha(.5));
+  }
+
+}

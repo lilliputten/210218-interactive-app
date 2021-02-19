@@ -390,8 +390,8 @@ module.exports = (env, argv) => {
       !isDevServer && new CopyWebpackPlugin({ // Simply copies the files over
         patterns: [
           { from: 'static-build-files', to: './', ...CopyWebpackPluginOptions },
-          { from: 'CHANGELOG.md', to: './', ...CopyWebpackPluginOptions },
-          { from: 'README.md', to: './', ...CopyWebpackPluginOptions }, // Readme listed at last position -- then can be overriden if readme exists in `static-build-files` (commands executiong in reversed order?).
+          // { from: 'CHANGELOG.md', to: './', ...CopyWebpackPluginOptions },
+          // { from: 'README.md', to: './', ...CopyWebpackPluginOptions }, // Readme listed at last position -- then can be overriden if readme exists in `static-build-files` (commands executiong in reversed order?).
         ].filter(Boolean),
       }),
       new HtmlWebpackPlugin({
@@ -404,7 +404,7 @@ module.exports = (env, argv) => {
         templateParameters: Object.assign({}, cssConfig, passParameters),
       }),
       !cssHotReload && new ExtractCssPlugin({ // Extract css
-        filename: 'styles.css',
+        filename: 'css/styles.css',
       }),
       preprocessBundles && new WebpackFilePreprocessorPlugin({
         debug: !isStats, // Prints processed assets if set to true (default: false)

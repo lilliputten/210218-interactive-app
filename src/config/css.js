@@ -132,7 +132,7 @@ const cssConfig = { // Common-used css variables...
   fontSizeXl: defaultFontSize + 4,
   fontSizeXxl: defaultFontSize + 8,
   titleFontSize: defaultFontSize + 8,
-  defaultLineHeight: 1.6,
+  defaultLineHeight: 1.3,
   // defaultFontWeight: 400,
   defaultFontWeight: 'normal',
   // defaultFontWeight: 500,

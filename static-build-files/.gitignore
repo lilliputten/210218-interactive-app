@@ -1,0 +1,17 @@
+.DS_Store
+node_modules
+\!UNUSED*
+\!ARC*
+
+# IDE
+.idea
+/.vscode/
+*.session
+
+# Temp project files
+tags
+.*.sw?
+*.tmp
+*.bak
+*~
+*_

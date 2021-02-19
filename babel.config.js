@@ -8,6 +8,7 @@ const srcPath = './src';
 
 const srcFolders = [
   'demo',
+  'data',
   'config',
   'components',
   'elements',

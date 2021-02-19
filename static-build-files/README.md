@@ -1,6 +1,6 @@
 # Simple interactive app
 
-## Build info (auto-generated)
+## Build info
 
 - Version: 0.0.2
 - Last changes timestamp: 2021.02.19, 06:37

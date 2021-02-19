@@ -6,6 +6,10 @@
 
 module.exports = { // Common-used app variables...
 
-  defaultPageId: 'Intro',
+  // defaultPageId: 'Start',
+
+  cardUrlPrefix: '/card/',
+  startUrl: '/',
+  finishUrl: '/finish',
 
 };
